@@ -13,5 +13,8 @@
   },
   "files": [
     "index.js"
-  ]
+  ],
+  "devDependencies": {
+    "shipjs": "^0.12.0"
+  }
 }
