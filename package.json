@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release:prepare": "shipjs prepare",
+    "release:trigger": "shipjs trigger"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/tyankatsu0105/sandbox-shipjs/issues"
   },
-  "homepage": "https://github.com/tyankatsu0105/sandbox-shipjs#readme"
+  "homepage": "https://github.com/tyankatsu0105/sandbox-shipjs#readme",
+  "devDependencies": {
+    "shipjs": "0.13.1"
+  }
 }
