@@ -2,14 +2,13 @@ name: Release
 
 on:
   pull_request:
-    types:
-      - closed
-    branches:    
-      - 'releases/**'
+    types: closed
 
 jobs:
   release:
     name: Release
+    if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'release')
+    
     runs-on: Ubuntu-latest
     steps:
       - uses: actions/checkout@v2
