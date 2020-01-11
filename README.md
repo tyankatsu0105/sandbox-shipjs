@@ -2,6 +2,6 @@
 
 This is my practice repo with shipjs.
 
-- [ ] npx shipjs setup
-- [ ] set action
+- [x] npx shipjs setup
+- [x] set action
 - [ ] create deploy code
