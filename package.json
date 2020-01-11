@@ -2,24 +2,27 @@
   "name": "@tyankatsu0105/sandbox-shipjs",
   "version": "0.0.0",
   "description": "",
-  "main": "lib/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "release:prepare": "shipjs prepare",
-    "release:trigger": "shipjs trigger"
+  "keywords": [],
+  "homepage": "https://github.com/tyankatsu0105/sandbox-shipjs#readme",
+  "bugs": {
+    "url": "https://github.com/tyankatsu0105/sandbox-shipjs/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tyankatsu0105/sandbox-shipjs.git"
   },
-  "keywords": [],
-  "author": "tyankatsu <frips.ryilsufupe+dev@gmail.com> (https://tyankatsu.netlify.com/)",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tyankatsu0105/sandbox-shipjs/issues"
+  "author": "tyankatsu <frips.ryilsufupe+dev@gmail.com> (https://tyankatsu.netlify.com/)",
+  "main": "lib/index.js",
+  "scripts": {
+    "release:prepare": "shipjs prepare",
+    "release:trigger": "shipjs trigger",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/tyankatsu0105/sandbox-shipjs#readme",
   "devDependencies": {
     "shipjs": "0.13.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
