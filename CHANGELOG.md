@@ -1,3 +1,12 @@
+# [0.13.0](https://github.com/tyankatsu0105/sandbox-shipjs/compare/v0.12.0...v0.13.0) (2020-01-12)
+
+
+### Features
+
+* docs ([4e2ef78](https://github.com/tyankatsu0105/sandbox-shipjs/commit/4e2ef7816e111e6c4773868dfdcd0f4ae5580e23))
+
+
+
 # [0.12.0](https://github.com/tyankatsu0105/sandbox-shipjs/compare/v0.11.0...v0.12.0) (2020-01-12)
 
 
