@@ -9,6 +9,8 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      
       - name: Check branch name
         id: check-branch
         run: |
@@ -19,7 +21,7 @@ jobs:
       - name: Publish Tag
         if: steps.check-branch.outputs.match == 'true'
         run: |
-          git config user.email "action@github.com"
-          git config user.name "GitHub Action"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           git tag ${{ github.head_ref }}
           git push origin ${{ github.head_ref }}
