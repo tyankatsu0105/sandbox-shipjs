@@ -1,3 +1,3 @@
 "use strict";
-var NAME = 'tyankatsu';
+var NAME = 'name';
 console.log(NAME);
