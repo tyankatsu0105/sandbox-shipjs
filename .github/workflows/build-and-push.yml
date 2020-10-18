@@ -1,9 +1,10 @@
 name: Build and Push
+
 on:
   push:
     branches:
       # semantic versioning regex 
-      - '^v[0-9]+.[0-9]+.[0-9]+$'
+      - 'v[0-9]+.[0-9]+.[0-9]+'
     
 jobs:
   build-and-push:
