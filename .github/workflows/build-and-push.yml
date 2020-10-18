@@ -45,6 +45,7 @@ jobs:
           git commit -a -m "build: build production"
 
       - name: Push changes
+        if: steps.check-diff.outputs.diff-files
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
