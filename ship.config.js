@@ -7,5 +7,5 @@ module.exports = {
     exec(`git tag -d ${releaseTag}`);
     exec(`git tag ${releaseTag}`);
     exec(`git push origin ${releaseTag} -f`);
-  };
+  }
 };
