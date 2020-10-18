@@ -1,5 +1,5 @@
 {
-  "name": "@tyankatsu0105/sandbox-shipjs",
+  "name": "sandbox-shipjs",
   "version": "0.15.0",
   "description": "",
   "keywords": [],
@@ -13,16 +13,13 @@
   },
   "license": "ISC",
   "author": "tyankatsu <frips.ryilsufupe+dev@gmail.com> (https://tyankatsu.netlify.com/)",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "release:prepare": "shipjs prepare",
-    "release:trigger": "shipjs trigger",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "release": "shipjs prepare"
   },
   "devDependencies": {
-    "shipjs": "0.13.1"
-  },
-  "publishConfig": {
-    "access": "public"
+    "shipjs": "0.22.0",
+    "typescript": "^4.0.3"
   }
 }

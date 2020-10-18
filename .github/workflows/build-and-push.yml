@@ -1,18 +1,15 @@
-name: Release
+name: Build and Push
 on:
-  pull_request:
-    types:
-      - closed
+  push:
+    branches:
+      - 'releases/v*'
+    
 jobs:
-  release:
-    name: Release
+  build-and-push:
+    name: Build and Push
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true && startsWith(github.head_ref, 'releases/v')
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: main
-          fetch-depth: 0
 
       - uses: actions/cache@v2
         id: cache
@@ -31,6 +28,18 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
 
-      - run: npx shipjs trigger
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build
+        run: npm run build
+
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -f dist
+          git commit -a -m "build: build production"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
