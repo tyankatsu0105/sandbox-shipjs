@@ -1,0 +1,10 @@
+name: Release
+on: push
+      
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: tyankatsu0105/pick-up-jira-ticket-id-action@v0.0.1
