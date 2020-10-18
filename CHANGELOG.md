@@ -1,3 +1,7 @@
+## [0.15.4](https://github.com/tyankatsu0105/sandbox-shipjs/compare/v0.15.0...v0.15.4) (2020-10-18)
+
+
+
 ## [0.15.3](https://github.com/tyankatsu0105/sandbox-shipjs/compare/v0.15.0...v0.15.3) (2020-10-18)
 
 
