@@ -19,7 +19,7 @@ jobs:
       - name: Publish Tag
         if: steps.check-branch.outputs.match == 'true'
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
           git tag ${{ github.head_ref }}
           git push origin ${{ github.head_ref }}
